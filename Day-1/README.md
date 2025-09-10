@@ -51,3 +51,39 @@ Tracks real resources ↔ Terraform config.
 Must be stored securely (local now, remote in real teams).
 
 Provider Block: connects Terraform to GCP with project + region.
+===================================
+Concepts:
+
+Terraform → Infrastructure as Code (IaC) tool to provision/manage cloud infra.
+
+Providers → Plugins (e.g., google, aws) that let Terraform talk to cloud APIs.
+
+Resources → Individual infra components (google_storage_bucket, google_compute_instance).
+
+Terraform workflow:
+
+terraform init → Initialize provider plugins.
+
+terraform plan → Preview changes.
+
+terraform apply → Create/update infra.
+
+terraform destroy → Remove infra.
+
+Key files:
+
+main.tf → Resource definitions.
+
+variables.tf → Declares variables.
+
+terraform.tfvars → Values for variables.
+
+.gitignore → Ignore terraform.tfstate (sensitive).
+
+Interview Pointers:
+
+Q: What is Terraform State?
+A: File (terraform.tfstate) that tracks resource mappings between code & real infra. Needed to know what to create/destroy/update.
+
+Q: Why ignore state files in Git?
+A: State contains sensitive info (keys, IPs, secrets). Should be stored in secure remote backend (e.g., GCS bucket, S3).

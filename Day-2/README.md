@@ -94,3 +94,38 @@ Enabled Compute Engine API
 Error was due to API not enabled.
 
 Enabled via console or gcloud services enable compute.googleapis.com.
+===========================================================
+Concepts:
+
+VM instance → Virtual machine hosted in GCP Compute Engine.
+
+Boot disk → Defines OS image (Debian, Ubuntu, etc.).
+
+Service accounts → Provide VMs identity & permissions for accessing GCP services.
+
+Scopes → OAuth2 permissions assigned to VMs.
+
+Metadata:
+
+Inject SSH keys → Allow secure login.
+
+Can also store custom key-value pairs for apps.
+
+Commands for SSH:
+
+ssh -i ~/.ssh/id_rsa terraform@<vm_public_ip>
+
+
+Interview Pointers:
+
+Q: Why add SSH keys in metadata?
+A: Lets you securely log in without password. Public key is added to VM, private key stays with user.
+
+Q: Why add service account & scopes?
+A: VMs need identity to call APIs (e.g., Cloud Storage, Pub/Sub). Scopes restrict what the VM can do.
+
+Q: Difference between variables.tf and terraform.tfvars?
+
+variables.tf → Declaration (placeholders).
+
+terraform.tfvars → Actual values.
