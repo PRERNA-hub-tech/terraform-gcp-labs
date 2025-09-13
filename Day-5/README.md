@@ -57,4 +57,4 @@ Buckets can be private; LB fetches objects.
 
 Cloud CDN reduces latency & backend load.
 
-Age header confirms cache HIT.
+Age header confirms cache HIT
