@@ -3,7 +3,8 @@ variable "project_id" {
 }
 variable "region" {
   type = string
+  default     = "US"
 }
 variable "bucket_name" {
-  
+  type        = string
 }
