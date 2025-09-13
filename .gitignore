@@ -11,4 +11,36 @@ crash.log
 *.json
 *.tfvars
 
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Django stuff
+*.log
+*.pot
+*.pyc
+db.sqlite3
+media/
+staticfiles/   # collected static files (after `collectstatic`)
+.env           # environment variables file (never commit secrets)
+
+# Docker
+*.pid
+*.seed
+*.pid.lock
+.dockerignore
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VSCode / PyCharm
+.vscode/
+.idea/
+
+node_modules/
+build/
 
