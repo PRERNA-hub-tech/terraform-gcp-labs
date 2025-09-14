@@ -23,7 +23,7 @@ __pycache__/
 db.sqlite3
 media/
 staticfiles/   # collected static files (after `collectstatic`)
-.env           # environment variables file (never commit secrets)
+*.env           # environment variables file (never commit secrets)
 
 # Docker
 *.pid
